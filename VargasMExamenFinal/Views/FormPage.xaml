@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VargasMExamenFinal.Views.FormPage"
+             Title="Mayra Vargas - 12/05/1974">
+    <StackLayout Padding="20">
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}"/>
+        <Entry Placeholder="Categoría" Text="{Binding Categoria}"/>
+        <Entry Placeholder="Cantidad" Keyboard="Numeric" Text="{Binding Cantidad}"/>
+        <Entry Placeholder="Precio Estimado" Keyboard="Numeric" Text="{Binding PrecioEstimado}"/>
+        <Button Text="Guardar" Command="{Binding SaveCommand}"/>
+    </StackLayout>
+</ContentPage>
