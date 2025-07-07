@@ -5,7 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:VargasMExamenFinal.Views"
     Shell.FlyoutBehavior="Disabled"
-    Title="VargasMExamenFinal">
+    Title="VargasMExamenFinal"
+    Shell.TabBarBackgroundColor="{StaticResource PrimaryButton}"
+    Shell.TabBarForegroundColor="White"
+    Shell.TabBarUnselectedColor="#d7edff"
+    Shell.TabBarTitleColor="White"
+    Shell.TabBarDisabledColor="Gray">
 
     <TabBar>
         <ShellContent Title="Formulario" ContentTemplate="{DataTemplate local:FormPage}" />

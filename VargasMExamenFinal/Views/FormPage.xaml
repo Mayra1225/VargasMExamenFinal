@@ -2,12 +2,21 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VargasMExamenFinal.Views.FormPage"
-             Title="Mayra Vargas - 12/05/1974">
+             Title="Mayra Vargas - 12/05/1974"
+             BackgroundColor="{StaticResource PrimaryBackground}"
+             Shell.BackgroundColor="{StaticResource PrimaryTitle}"
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White">
     <StackLayout Padding="20">
-        <Entry Placeholder="Nombre" Text="{Binding Nombre}"/>
-        <Entry Placeholder="Categoría" Text="{Binding Categoria}"/>
-        <Entry Placeholder="Cantidad" Keyboard="Numeric" Text="{Binding Cantidad}"/>
-        <Entry Placeholder="Precio Estimado" Keyboard="Numeric" Text="{Binding PrecioEstimado}"/>
-        <Button Text="Guardar" Command="{Binding SaveCommand}"/>
+        <Label Text="Agregar Producto" FontSize="24" TextColor="{StaticResource PrimaryTitle}" HorizontalOptions="Center"/>
+        <Label Text="Nombre" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}" TextColor="{StaticResource PrimaryText}" BackgroundColor="White"/>
+        <Label Text="Categoría" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+        <Entry Placeholder="Categoría" Text="{Binding Categoria}" TextColor="{StaticResource PrimaryText}" BackgroundColor="White"/>
+        <Label Text="Cantidad" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+        <Entry Placeholder="Cantidad" Keyboard="Numeric" Text="{Binding Cantidad}" TextColor="{StaticResource PrimaryText}" BackgroundColor="White"/>
+        <Label Text="Precio" FontSize="15" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+        <Entry Placeholder="Precio Estimado" Keyboard="Numeric" Text="{Binding PrecioEstimado}" TextColor="{StaticResource PrimaryText}" BackgroundColor="White"/>
+        <Button Text="Guardar" Command="{Binding SaveCommand}" BackgroundColor="{StaticResource PrimaryButton}" TextColor="White" CornerRadius="12" Margin="10"/>
     </StackLayout>
 </ContentPage>

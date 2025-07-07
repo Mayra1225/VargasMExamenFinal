@@ -2,41 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VargasMExamenFinal.Views.ListPage"
-             Title="Lsta de Productos">
+             Title="Lsta de Productos"
+             BackgroundColor="{StaticResource PrimaryBackground}"
+             Shell.BackgroundColor="{StaticResource PrimaryTitle}"
+             Shell.ForegroundColor="White"
+             Shell.TitleColor="White">
     <CollectionView ItemsSource="{Binding Productos}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame Margin="5" BorderColor="Gray">
+                <Frame Margin="5" BorderColor="{StaticResource PrimaryBorder}" CornerRadius="10" BackgroundColor="White">
                     <StackLayout>
-                        <Label>
+                        <Label Text="{Binding Nombre}" FontSize="18" FontAttributes="Bold" TextColor="{StaticResource PrimaryText}"/>
+                        <Label TextColor="{StaticResource PrimaryText}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Nombre: " />
-                                    <Span Text="{Binding Nombre}" />
+                                    <Span Text="Categoria: " TextColor="{StaticResource PrimaryText}"/>
+                                    <Span Text="{Binding Categoria}" TextColor="{StaticResource PrimaryText}"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Label>
+                        <Label TextColor="{StaticResource PrimaryText}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Categoria: " />
-                                    <Span Text="{Binding Categoria}" />
+                                    <Span Text="Cantidad: " TextColor="{StaticResource PrimaryText}"/>
+                                    <Span Text="{Binding Cantidad}" TextColor="{StaticResource PrimaryText}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Label>
+                        <Label TextColor="{StaticResource PrimaryText}">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Cantidad: " />
-                                    <Span Text="{Binding Cantidad}" />
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span Text="Precio: " />
-                                    <Span Text="{Binding PrecioEstimado}" />
+                                    <Span Text="Precio: " TextColor="{StaticResource PrimaryText}"/>
+                                    <Span Text="{Binding PrecioEstimado}" TextColor="{StaticResource PrimaryText}"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
