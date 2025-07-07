@@ -3,15 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VargasMExamenFinal.Views.ListPage"
              Title="Lsta de Productos">
-    <CollectionView ItemsSource="{Binding Nombre}">
+    <CollectionView ItemsSource="{Binding Productos}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Frame Margin="5" BorderColor="Gray">
                     <StackLayout>
-                        <Label Text="{Binding Nombre}" FontAttributes="Bold"/>
-                        <Label Text="{Binding Categoria}"/>
-                        <Label Text="Cantidad: {Binding Cantidad}"/>
-                        <Label Text="Precio: {Binding PrecioEstimado}"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Nombre: " />
+                                    <Span Text="{Binding Nombre}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Categoria: " />
+                                    <Span Text="{Binding Categoria}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Cantidad: " />
+                                    <Span Text="{Binding Cantidad}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Precio: " />
+                                    <Span Text="{Binding PrecioEstimado}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
                     </StackLayout>
                 </Frame>
             </DataTemplate>

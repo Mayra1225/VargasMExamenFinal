@@ -3,13 +3,14 @@
     x:Class="VargasMExamenFinal.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:VargasMExamenFinal"
+    xmlns:local="clr-namespace:VargasMExamenFinal.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="VargasMExamenFinal">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Formulario" ContentTemplate="{DataTemplate local:FormPage}" />
+        <ShellContent Title="Lista" ContentTemplate="{DataTemplate local:ListPage}" />
+        <ShellContent Title="Logs" ContentTemplate="{DataTemplate local:LogPage}" />
+    </TabBar>
 
 </Shell>
